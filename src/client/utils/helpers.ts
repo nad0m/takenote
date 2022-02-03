@@ -22,8 +22,8 @@ export const getActiveNoteFromShortUuid = (notes: NoteItem[], shortUuid: string)
   return notes.find((note) => note.id.startsWith(uuidWithoutHash))
 }
 
-export const getActiveCategory = (categories: CategoryItem[], activeCategoryId: string) =>
-  categories.find(({ id }) => id === activeCategoryId)
+export const getActiveCategory = (categories: CategoryItem[] = [], activeCategoryId: string) =>
+  categories?.find(({ id }) => id === activeCategoryId)
 
 export const getNoteTitle = (text: string): string => {
   // Remove whitespace from both ends
