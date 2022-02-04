@@ -40,7 +40,7 @@ export const TakeNoteApp: React.FC = () => {
   const { categories } = useSelector(getCategories)
   const { pendingSync } = useSelector(getSync)
 
-  const activeCategory = getActiveCategory(categories, activeCategoryId)
+  const activeCategory = getActiveCategory([], activeCategoryId)
 
   // ===========================================================================
   // Dispatch
