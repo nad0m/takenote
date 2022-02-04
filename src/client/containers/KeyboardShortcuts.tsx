@@ -25,7 +25,7 @@ export const KeyboardShortcuts: React.FC = () => {
   // Selectors
   // ===========================================================================
 
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
   const { activeCategoryId, activeFolder, activeNoteId, notes, selectedNotesIds } = useSelector(
     getNotes
   )

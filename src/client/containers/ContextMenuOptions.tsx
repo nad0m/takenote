@@ -101,7 +101,7 @@ const NotesOptions: React.FC<NotesOptionsProps> = ({ clickedNote }) => {
   // ===========================================================================
 
   const { selectedNotesIds, notes } = useSelector(getNotes)
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
 
   const selectedNotes = notes.filter((note) => selectedNotesIds.includes(note.id))
   const isSelectedNotesDiffFavor = Boolean(
@@ -174,8 +174,8 @@ const NotesOptions: React.FC<NotesOptionsProps> = ({ clickedNote }) => {
               isSelectedNotesDiffFavor
                 ? LabelText.TOGGLE_FAVORITE
                 : clickedNote.favorite
-                ? LabelText.REMOVE_FAVORITE
-                : LabelText.MARK_AS_FAVORITE
+                  ? LabelText.REMOVE_FAVORITE
+                  : LabelText.MARK_AS_FAVORITE
             }
           />
           <ContextMenuOption

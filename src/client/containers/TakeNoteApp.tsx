@@ -37,10 +37,10 @@ export const TakeNoteApp: React.FC = () => {
 
   const { darkTheme, sidebarVisible } = useSelector(getSettings)
   const { activeFolder, activeCategoryId, notes } = useSelector(getNotes)
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
   const { pendingSync } = useSelector(getSync)
 
-  const activeCategory = getActiveCategory([], activeCategoryId)
+  const activeCategory = getActiveCategory(categories, activeCategoryId)
 
   // ===========================================================================
   // Dispatch

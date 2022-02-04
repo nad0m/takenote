@@ -28,7 +28,7 @@ export const NoteList: React.FC = () => {
   const { notesSortKey } = useSelector(getSettings)
   const { activeCategoryId, activeFolder, selectedNotesIds, notes, searchValue } =
     useSelector(getNotes)
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
 
   // ===========================================================================
   // Dispatch

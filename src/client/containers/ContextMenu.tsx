@@ -11,7 +11,7 @@ import { ContextMenuEnum } from '@/utils/enums'
 import { isDraftNote } from '@/utils/helpers'
 
 export const MenuUtilitiesContext = createContext({
-  setOptionsId: (id: string) => {},
+  setOptionsId: (id: string) => { },
 })
 interface Position {
   x: number
@@ -128,7 +128,7 @@ const NotesMenu: React.FC<NotesMenuProps> = ({ note, setOptionsId }) => {
   // Selectors
   // ===========================================================================
 
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
   const { activeCategoryId } = useSelector(getNotes)
 
   // ===========================================================================

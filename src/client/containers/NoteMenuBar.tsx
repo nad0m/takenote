@@ -34,7 +34,7 @@ export const NoteMenuBar = () => {
   // ===========================================================================
 
   const { notes, activeNoteId } = useSelector(getNotes)
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
   const { syncing, lastSynced, pendingSync } = useSelector(getSync)
   const { darkTheme } = useSelector(getSettings)
 

@@ -46,7 +46,7 @@ export const SettingsModal: React.FC = () => {
   )
   const { currentUser } = useSelector(getAuth)
   const { notes, activeFolder, activeCategoryId } = useSelector(getNotes)
-  const { categories } = useSelector(getCategories)
+  const { categories = [] } = useSelector(getCategories)
 
   // ===========================================================================
   // Dispatch

@@ -21,7 +21,7 @@ export const CategoryList: React.FC = () => {
   // ===========================================================================
 
   const {
-    categories,
+    categories = [],
     editingCategory: { id: editingCategoryId, tempName: tempCategoryName },
   } = useSelector(getCategories)
 
